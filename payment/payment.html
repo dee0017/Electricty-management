@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Payment - PowerMeter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    
+    
+    <div class="payment-container">
+        <header class="payment-header">
+            <h1>Make a Payment</h1>
+            <a href="../dashboard/dashboard.html" class="back-button">Back to Dashboard</a>
+        </header>
+
+        <div class="balance-display">
+            <div class="balance-label">Current Balance</div>
+            <div class="balance-amount">₦15,240</div>
+        </div>
+        
+        <div class="payment-form">
+            <h2>Payment Details</h2>
+            <form id="paymentForm">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div>
+                    <label for="amount">Amount (₦)</label>
+                    <input type="number" id="amount" placeholder="Enter amount" required>
+                </div>
+
+                <button type="button" onclick="payWithPaystack()">Confirm Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

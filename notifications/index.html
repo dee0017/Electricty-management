@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="notifications-container">
+        <header class="notifications-header">
+            <div class="header-content">
+                <h1>Notifications</h1>
+                <span class="notification-count">2 unread</span>
+            </div>
+            <a href="../dashboard/dashboard.html" class="back-button">Back to Dashboard</a>
+        </header>
+
+        <div class="notifications-list">
+            <div class="notification-item unread">
+                <div class="notification-content">
+                    <span class="notification-date">Nov 5, 2024</span>
+                    <p class="notification-message">
+                        <span class="notification-type success">Payment Success</span>
+                        Payment of ₦5,000 received successfully.
+                    </p>
+                </div>
+                <div class="notification-actions">
+                    <button class="btn-mark-read">
+                        <span class="dot"></span>
+                        Mark as Read
+                    </button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="notification-item unread">
+                <div class="notification-content">
+                    <span class="notification-date">Nov 3, 2024</span>
+                    <p class="notification-message">
+                        <span class="notification-type warning">Low Balance</span>
+                        Your balance is below ₦1,000. Please top up soon to avoid service interruption.
+                    </p>
+                </div>
+                <div class="notification-actions">
+                    <button class="btn-mark-read">
+                        <span class="dot"></span>
+                        Mark as Read
+                    </button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="notification-item">
+                <div class="notification-content">
+                    <span class="notification-date">Nov 1, 2024</span>
+                    <p class="notification-message">
+                        <span class="notification-type info">Usage Alert</span>
+                        Your daily usage is 25% higher than usual.
+                    </p>
+                </div>
+                <div class="notification-actions">
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

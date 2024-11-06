@@ -1,0 +1,99 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background and Container */
+body {
+    background: #0D0C1D;
+    color: #ECEBF9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed to min-height for responsiveness */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 20px; /* Add padding to body for better scroll experience on mobile */
+}
+
+.login-container {
+    background: rgba(13, 12, 29, 0.8);
+    padding: 3rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 255, 163, 0.3);
+}
+
+/* Heading */
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #FFD700;
+}
+
+/* Form Labels */
+.login-container label {
+    font-size: 0.9rem;
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #ECEBF9;
+}
+
+/* Input Fields */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem 0 1rem;
+    background: transparent;
+    border: 2px solid #00FFA3;
+    border-radius: 5px;
+    color: #ECEBF9;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #FFD700;
+    box-shadow: 0 0 8px rgba(0, 255, 163, 0.5);
+}
+
+/* Button */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1rem;
+    background: #00FFA3;
+    border: none;
+    border-radius: 5px;
+    color: #0D0C1D;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #FFD700;
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Forgot Password */
+.forgot-password {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.forgot-password a {
+    color: #00FFA3;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #FFD700;
+}

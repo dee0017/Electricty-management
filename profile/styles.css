@@ -1,0 +1,167 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #0D0C1D;
+    color: #ECEBF9;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-header h1 {
+    font-size: 28px;
+    color: #ECEBF9;
+}
+
+.back-button {
+    background-color: #00FFA3;
+    color: #0D0C1D;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.back-button:hover {
+    opacity: 0.9;
+}
+
+/* Form styles */
+.profile-form {
+    background-color: rgba(236, 235, 249, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ECEBF9;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background-color: #0D0C1D;
+    border: 1px solid rgba(236, 235, 249, 0.2);
+    border-radius: 8px;
+    color: #ECEBF9;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00FFA3;
+}
+
+input::placeholder {
+    color: rgba(236, 235, 249, 0.4);
+}
+
+input[readonly] {
+    background-color: rgba(13, 12, 29, 0.5);
+    cursor: not-allowed;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-edit {
+    background-color: #FFD700;
+    color: #0D0C1D;
+    width: 100%;
+}
+
+.btn-save {
+    background-color: #00FFA3;
+    color: #0D0C1D;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 10px;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .profile-form {
+        padding: 20px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+/* Animation for readonly to editable transition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input:not([readonly]) {
+    animation: fadeIn 0.3s ease-out;
+}

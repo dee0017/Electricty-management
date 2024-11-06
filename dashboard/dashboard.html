@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerMeter Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <span>&#9889;</span>
+                <div class="logo">PowerMeter</div>
+                <button id="closeSidebar" class="close-sidebar" aria-label="Close sidebar">×</button>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="../dashboard/dashboard.html" class="nav-link active">
+                    <span class="nav-icon">📊</span>
+                    Dashboard
+                </a>
+                <a href="../payment/payment.html" class="nav-link">
+                    <span class="nav-icon">💳</span>
+                    Payments
+                </a>
+                <a href="../history/history.html" class="nav-link">
+                    <span class="nav-icon">📈</span>
+                    Usage History
+                </a>
+                <a href="../notifications/index.html" class="nav-link">
+                    <span class="nav-icon">🔔</span>
+                    Notifications
+                </a>
+                <a href="../profile/profile.html" class="nav-link">
+                    <span class="nav-icon">👤</span>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="mainContent" class="main-content" role="main">
+            <div class="dashboard-header">
+                <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+                <h1>Dashboard</h1>
+                <button onclick="window.location.href='../payment/payment.html'" class="btn-action">Quick Pay</button>
+
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Current Balance</h3>
+                    <div class="stat-value">₦15,240</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Usage Today</h3>
+                    <div class="stat-value">4.2 kWh</div>
+                </div>
+                <div class="stat-card">
+                    <h3>This Month</h3>
+                    <div class="stat-value">126 kWh</div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <div class="activity-header">
+                    <h2>Recent Activity</h2>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-info">
+                            <span class="activity-type">Payment Received</span>
+                            <span class="activity-value">₦5,000</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-info">
+                            <span class="activity-type">Meter Reading</span>
+                            <span class="activity-value">2.1 kWh</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-info">
+                            <span class="activity-type">Low Balance Warning</span>
+                            <span class="activity-value">Alert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

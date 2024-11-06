@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Payment Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase SDK -->
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+            <p class="forgot-password">Don't have an account? <a href="/signup/signup.html">Sign up</a></p>
+        </form>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <!-- Your Firebase Configuration Script -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAGtNsgTpZL5g08-_OwRs2lIbvvi5sFFkA",
+            authDomain: "rt-elect.firebaseapp.com",
+            projectId: "rt-elect",
+            storageBucket: "rt-elect.firebasestorage.app",
+            messagingSenderId: "970529270247",
+            appId: "1:970529270247:web:390ac51ab0f4ea24273542",
+            measurementId: "G-6ZPD117S8Z"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="auth.js"></script>
+</html>
